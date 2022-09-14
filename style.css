@@ -1,0 +1,87 @@
+/* 
+Colors: 
+    #85152a 
+    #F22727
+    #fc3369
+    #152644
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Sempre mantem o WIDTH máximo mesmo com MARGIN e PADDING aumentados. */
+}
+
+section ul {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap; /* Quebra de linha dos itens FLEX */
+    gap: 16px; /* Distância entre itens (Só funciona com o display: flex) */
+    margin-top: 24px;
+    
+}
+
+.game-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border: 1px solid #543e3e;
+    border-radius: 50%;
+}
+
+body {
+    background-image: url(./assets/bg.jpg); 
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+main * {
+    /* border: solid 1px lightblue; */
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column; /* Muda o direcionamento FLEX para colunas */
+    gap: 24px;
+}
+
+section {
+    background-image: linear-gradient(90deg, #85152a  0%, #F22727 50%, #fc3369 100%  );
+    padding-top: 6px;
+    border-radius: 10px;
+}
+
+section div {
+    padding: 24px 32px 32px;
+    border-radius: 8px;
+    
+    background-color: #152644;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+
+    color: #FFFFFF;
+}
+
+section p {
+    letter-spacing: -0.18px;
+
+    color: #A1A1AA;
+}
