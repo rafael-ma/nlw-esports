@@ -9,28 +9,7 @@ Colors:
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Sempre mantem o WIDTH máximo mesmo com MARGIN e PADDING aumentados. */
-}
-
-section ul {
-    list-style: none;
-
-    display: flex;
-    flex-wrap: wrap; /* Quebra de linha dos itens FLEX */
-    gap: 16px; /* Distância entre itens (Só funciona com o display: flex) */
-    margin-top: 24px;
-    
-}
-
-.game-list img {
-    width: 90px;
-    border-radius: 8px;
-}
-
-.channel-list img {
-    width: 70px;
-    border: 1px solid #543e3e;
-    border-radius: 50%;
+    box-sizing: border-box; /* Sempre mantem o WIDTH máximo, mesmo com MARGIN e PADDING aumentados. */
 }
 
 body {
@@ -46,6 +25,32 @@ body * {
     line-height: 160%;
 }
 
+header {
+    margin-top: 32px;
+    text-align: center;
+}
+
+header div {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #85152a  0%, #F22727 50%, #fc3369 100%  );
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+}
+
+header div img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
 main * {
     /* border: solid 1px lightblue; */
 }
@@ -53,7 +58,7 @@ main * {
 main {
     max-width: 580px;
     width: 90%;
-    margin: auto;
+    margin: 32px auto;
     margin-top: 32px;
 
     display: flex;
@@ -84,4 +89,79 @@ section p {
     letter-spacing: -0.18px;
 
     color: #A1A1AA;
+}
+
+section ul {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap; /* Quebra de linha dos itens FLEX */
+    gap: 16px; /* Distância entre itens (Só funciona com o display: flex) */
+    margin-top: 24px;
+    
+}
+
+section ul li {
+    transition: transform .3s; /* Seleciona a transição e a duração da animação */
+}
+
+section ul li:hover {
+    transform: scale(1.1); /* Altera o tamanho (escala) para 1.1 quando passar o cursor */
+}
+
+.game-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border: 1px solid #543e3e;
+    border-radius: 50%;
+}
+
+/* Animation */
+
+header div {
+    animation: fromTop 1s .2s backwards; /* Nome da animação, duração, delay e iniciar animação com propriedades ativas */
+}
+
+main section {
+    animation: fromRight 1s backwards;
+}
+
+main section:nth-child(1) { /*https://youtu.be/dwx9gtTTDig?t=1952*/
+    animation-delay: .3s;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(2) {
+    animation-delay: .5s;
+}
+
+@keyframes fromTop { /* Seletor de animações e nome da animação */
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
