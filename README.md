@@ -6,7 +6,7 @@
 
 ![preview](./.github/preview.png)
 
-[Clique aqui para acessar]()
+[Clique aqui para acessar](https://rafael-ma.github.io/nlw-esports/)
 
 ## Tecnologias
 - HTML
